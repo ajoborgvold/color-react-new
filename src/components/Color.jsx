@@ -1,7 +1,8 @@
-import { useContext } from "react"
+import { useContext, useState } from "react"
 import { AppContext } from "../context/AppContext"
 
 function Color() {
+    const [hoveredItem, setHoveredItem] = useState(null)
     const { colorData, copyHexCode, copiedHexCode, userSelection } = useContext(AppContext)
 
     const colorEl = colorData.map(item => {
@@ -13,15 +14,17 @@ function Color() {
             <div
                 key={item.hex.value}
                 onClick={() => copyHexCode(item.hex.value)}
+                onMouseEnter={() => setHoveredItem(item.hex.value)}
+                onMouseLeave={() => setHoveredItem(null)}
                 style={divStyle}
                 className="color-item"
             >
-                {
-                    !copiedHexCode || copiedHexCode === userSelection.seed ?
-                        <p className="p--small color__p">{item.hex.value}</p> :
-                        copiedHexCode && item.hex.value === copiedHexCode ?
-                            <p className="p--small color__p">Copied!</p> :
-                            <p className="p--small color__p hidden">{item.hex.value}</p>
+                {!copiedHexCode || copiedHexCode === userSelection.seed ?
+                    <p className="p--small color__p">
+                        {hoveredItem === item.hex.value ? 'Copy hex code' : item.hex.value}
+                    </p> :
+                    copiedHexCode && item.hex.value === copiedHexCode ?
+                        <p className="p--small color__p">Copied!</p> : null
                 }
             </div>
         )
@@ -32,12 +35,6 @@ function Color() {
             {colorEl}
         </>
     )
-
-    // return (
-    //     <div className="color-wrapper">
-    //         {colorEl}
-    //     </div>
-    // )
 }
 
 export default Color
