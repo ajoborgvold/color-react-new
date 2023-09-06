@@ -213,7 +213,7 @@ body[data-theme="light"] {
 .color-scheme-container__top {
   display: grid;
   grid-template-rows: auto;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1.5fr 1fr;
   /* justify-content: space-between; */
   align-items: center;
   gap: 1em;
