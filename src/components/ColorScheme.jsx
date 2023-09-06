@@ -7,10 +7,8 @@ function ColorScheme() {
 
     return (
         <section className="color-scheme-container">
-                <h1>Selected seed color: {userSelection.seed.toUpperCase()}</h1>
-            {/* <div className='scheme__heading'>
-            </div> */}
-            <div className='color-wrapper'>
+            <p className='p--large'>Selected seed color: <span className='border-bottom'>{userSelection.seed.toUpperCase()}</span></p>
+            <div className='scheme-wrapper'>
                 <Color />
             </div>
         </section>
