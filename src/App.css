@@ -92,7 +92,6 @@ body[data-theme="light"] {
 }
 
 
-
 /* Header */
 .header {
   height: max-content;
@@ -113,7 +112,6 @@ body[data-theme="light"] {
   'select select'
   'picker btn';
   gap: .5em;
-  width: 50%;
   max-width: 768px;
   margin: 0 auto;
   /* padding: 1em; */
@@ -273,6 +271,7 @@ body[data-theme="light"] {
   .form {
     grid-template-columns: auto 1fr auto;
     grid-template-areas: 'picker select btn';
+    width: 50%;
   }
 
   .color-scheme-container {
