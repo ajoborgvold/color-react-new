@@ -151,7 +151,7 @@ body[data-theme="light"] {
 }
 
 .swatch {
-  width: 4em;
+  width: 3em;
   height: 100%;
   border: 1px solid var(--swatch-border);
   border-radius: .3em;
