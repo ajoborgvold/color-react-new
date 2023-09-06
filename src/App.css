@@ -61,7 +61,7 @@ body[data-theme="light"] {
   color: #fff;
   font-weight: 300;
   /* padding: .5em 1em; */
-  padding: .25 .5em;
+  /* padding: .25 .5em; */
   border: 1px solid #3D4B60;
   border-radius: .3em;
   cursor: pointer;
@@ -168,6 +168,7 @@ body[data-theme="light"] {
   font-family: var(--inter-font);
   font-size: .875rem;
   width: max-content;
+  padding: .375em .75em;
 }
 
 .label {
