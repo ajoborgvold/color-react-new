@@ -8,12 +8,13 @@ function ColorScheme() {
     return (
         <section className="color-scheme-container">
             <div className='color-scheme-container__top'>
-                <p className='p--large top--left'>Selected seed color:</p>
-                <p 
+                <p className='p--inter top--left'>Selected seed color:</p>
+                <p
+                    tabIndex={0}
                     onClick={() => copyHexCode(userSelection.seed)}
                     onMouseEnter={() => handleMouseEnter(userSelection.seed)}
                     onMouseLeave={handleMouseLeave}
-                    className='p--medium top--right'
+                    className='p--roboto top--right'
                 >
                     {copiedHexCode === userSelection.seed ? 'Copied!' :
                         hoveredItem === userSelection.seed ? 'Copy' : userSelection.seed.toUpperCase()}
