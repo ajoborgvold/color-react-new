@@ -9,7 +9,7 @@ function Modal() {
 
         setTimeout(() => {
             dialogRef.current.close()
-        }, 17500)
+        }, 15000)
     }, [])
     
     function closeModalonClickOutside(e) {
@@ -38,17 +38,17 @@ function Modal() {
                 onInit={(typewriter) => {
                     typewriter
                     .changeDelay(50)
-                    .typeString(`<p>${textArray[0]}</p>`)
+                    .typeString(`<p class="p--roboto">${textArray[0]}</p>`)
+                    .pauseFor(750)
+                    .deleteAll(`<p class="p--roboto">${textArray[0]}</p>`)
+                    .typeString(`<p class="p--roboto">${textArray[1]}</p>`)
+                    .pauseFor(750)
+                    .deleteAll(`<p class="p--roboto">${textArray[1]}</p>`)
+                    .typeString(`<p class="p--roboto">${textArray[2]}</p>`)
                     .pauseFor(1000)
-                    .deleteAll(`<p>${textArray[0]}</p>`)
-                    .typeString(`<p>${textArray[1]}</p>`)
+                    .typeString(`<p class="p--roboto">${textArray[3]}</p>`)
                     .pauseFor(1000)
-                    .deleteAll(`<p>${textArray[1]}</p>`)
-                    .typeString(`<p>${textArray[2]}</p>`)
-                    .pauseFor(1500)
-                    .typeString(`<p>${textArray[3]}</p>`)
-                    .pauseFor(1500)
-                    .typeString(`<p>${textArray[4]}</p>`)
+                    .typeString(`<p class="p--roboto">${textArray[4]}</p>`)
                     .start();
                 }}
                 />
