@@ -266,10 +266,6 @@ body[data-theme="light"] {
   border-radius: .3em;
 }
 
-.hidden {
-  visibility: hidden;
-}
-
 .color-item:hover,
 .color-item:focus,
 .color-item:active {
