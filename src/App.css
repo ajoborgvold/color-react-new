@@ -168,6 +168,7 @@ body[data-theme="light"] {
   font-family: var(--inter-font);
   font-size: .875rem;
   width: max-content;
+  margin-left: 1em;
   padding: .375em .75em;
 }
 
