@@ -12,6 +12,7 @@ function Color() {
         return (
             <div
                 key={item.hex.value}
+                tabIndex={0}
                 onClick={() => copyHexCode(item.hex.value)}
                 onMouseEnter={() => handleMouseEnter(item.hex.value)}
                 onMouseLeave={handleMouseLeave}
@@ -19,11 +20,11 @@ function Color() {
                 className="color-item"
             >
                 {!copiedHexCode || copiedHexCode === userSelection.seed ?
-                    <p className="p--medium color__p">
+                    <p className="p--roboto color__p">
                         {hoveredItem === item.hex.value ? 'Copy hex code' : item.hex.value}
                     </p> :
                     copiedHexCode && item.hex.value === copiedHexCode ?
-                        <p className="p--medium color__p">Copied!</p> : null
+                        <p className="p--roboto color__p">Copied!</p> : null
                 }
             </div>
         )
