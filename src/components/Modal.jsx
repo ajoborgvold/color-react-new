@@ -9,7 +9,7 @@ function Modal() {
 
         setTimeout(() => {
             dialogRef.current.close()
-        }, 17000)
+        }, 17500)
     }, [])
     
     function closeModalonClickOutside(e) {
