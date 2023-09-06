@@ -2,8 +2,7 @@ import { useContext, useState } from "react"
 import { AppContext } from "../context/AppContext"
 
 function Color() {
-    const [hoveredItem, setHoveredItem] = useState(null)
-    const { colorData, copyHexCode, copiedHexCode, userSelection } = useContext(AppContext)
+    const { colorData, handleColorSchemeClick, copiedHexCode, userSelection, handleMouseEnter, handleMouseLeave, hoveredItem } = useContext(AppContext)
 
     const colorEl = colorData.map(item => {
         const divStyle = {
@@ -13,9 +12,9 @@ function Color() {
         return (
             <div
                 key={item.hex.value}
-                onClick={() => copyHexCode(item.hex.value)}
-                onMouseEnter={() => setHoveredItem(item.hex.value)}
-                onMouseLeave={() => setHoveredItem(null)}
+                onClick={() => handleColorSchemeClick(item.hex.value)}
+                onMouseEnter={() => handleMouseEnter(item.hex.value)}
+                onMouseLeave={handleMouseLeave}
                 style={divStyle}
                 className="color-item"
             >
