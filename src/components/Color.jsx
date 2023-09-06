@@ -14,14 +14,14 @@ function Color() {
                 key={item.hex.value}
                 onClick={() => copyHexCode(item.hex.value)}
                 style={divStyle}
-                className="color-div"
+                className="color-item"
             >
                 {
                     !copiedHexCode ?
-                        <p className="color__p">{item.hex.value}</p> :
+                        <p className="p--small color__p">{item.hex.value}</p> :
                         copiedHexCode && item.hex.value === copiedHexCode ?
-                            <p className="color__p">Copied!</p> :
-                            <p className="color__p hidden">{item.hex.value}</p>
+                            <p className="p--small color__p">Copied!</p> :
+                            <p className="p--small color__p hidden">{item.hex.value}</p>
                 }
             </div>
         )
