@@ -48,28 +48,17 @@ body[data-theme="light"] {
 }
 
 p {
-  font-family: var(--inter-font);
   font-size: .875rem;
   font-weight: 300;
 }
 
-/* .p--small {
-  color: var(--color-primary);
+.p--inter {
   font-family: var(--inter-font);
-  font-size: .75rem;
-} */
-/* 
-.p--medium {
-  font-family: var(--roboto-font);
-  font-size: .875rem;
 }
 
-.p--large {
-  color: var(--color-primary);
-  font-family: var(--inter-font);
-  font-size: 1rem;
-} */
-
+.p--roboto {
+  font-family: var(--roboto-font);
+}
 
 /* Buttons */
 .btn {
@@ -97,8 +86,11 @@ p {
   transform: translate(-50%, -50%);
   background-color: var(--bg-primary);
   color: var(--color-primary);
-  font-family: var(--roboto-font);
   box-shadow: 0 0 .5em 1px var(--box-shadow);
+}
+
+.modal > p {
+  /* font-family: var(--roboto-font); */
 }
 
 .modal::backdrop {
