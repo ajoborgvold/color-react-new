@@ -24,7 +24,7 @@ function AppContextProvider({children}) {
         setColorData(data.colors)
     }
 
-    function handleColorSchemeClick(hex) {
+    function copyHexCode(hex) {
         navigator.clipboard.writeText(hex)
         setCopiedHexCode(hex)
         setTimeout(() => {
@@ -55,7 +55,7 @@ function AppContextProvider({children}) {
             value={{
                 colorData,
                 callApi,
-                handleColorSchemeClick,
+                copyHexCode,
                 copiedHexCode,
                 handleModeChange,
                 showColorPicker,
