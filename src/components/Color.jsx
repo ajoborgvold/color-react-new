@@ -19,11 +19,11 @@ function Color() {
                 className="color-item"
             >
                 {!copiedHexCode || copiedHexCode === userSelection.seed ?
-                    <p className="p--small color__p">
+                    <p className="p--medium color__p">
                         {hoveredItem === item.hex.value ? 'Copy hex code' : item.hex.value}
                     </p> :
                     copiedHexCode && item.hex.value === copiedHexCode ?
-                        <p className="p--small color__p">Copied!</p> : null
+                        <p className="p--medium color__p">Copied!</p> : null
                 }
             </div>
         )
