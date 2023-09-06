@@ -64,9 +64,10 @@ function AppContextProvider({children}) {
     }
     
     function handleMouseLeave() {
-        if (!isTouchDevice()) {
-            setHoveredItem(null)
-        }
+        // if (!isTouchDevice()) {
+        //     setHoveredItem(null)
+        // }
+        setHoveredItem(null)
     }
 
     return (
