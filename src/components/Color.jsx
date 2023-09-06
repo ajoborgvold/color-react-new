@@ -2,24 +2,24 @@ import { useContext, useState } from "react"
 import { AppContext } from "../context/AppContext"
 
 function Color() {
-    const [hoveredItem, setHoveredItem] = useState(null)
-    const { colorData, copyHexCode, copiedHexCode, userSelection } = useContext(AppContext)
+    // const [hoveredItem, setHoveredItem] = useState(null)
+    const { colorData, copyHexCode, copiedHexCode, userSelection, hoveredItem, handleMouseEnter, handleMouseLeave } = useContext(AppContext)
 
-    function isTouchDevice() {
-        return 'ontouchstart' in window || navigator.msMaxTouchPoints > 0
-    }
+    // function isTouchDevice() {
+    //     return 'ontouchstart' in window || navigator.msMaxTouchPoints > 0
+    // }
 
-    function handleMouseEnter(hex) {
-        if (!isTouchDevice()) {
-            setHoveredItem(hex)
-        }
-    }
+    // function handleMouseEnter(hex) {
+    //     if (!isTouchDevice()) {
+    //         setHoveredItem(hex)
+    //     }
+    // }
     
-    function handleMouseLeave() {
-        if (!isTouchDevice()) {
-            setHoveredItem(null)
-        }
-    }
+    // function handleMouseLeave() {
+    //     if (!isTouchDevice()) {
+    //         setHoveredItem(null)
+    //     }
+    // }
 
     const colorEl = colorData.map(item => {
         const divStyle = {
