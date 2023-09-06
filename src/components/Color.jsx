@@ -3,7 +3,7 @@ import { AppContext } from "../context/AppContext"
 
 function Color() {
     const [hoveredItem, setHoveredItem] = useState(null)
-    const { colorData, handleColorSchemeClick, copiedHexCode, userSelection } = useContext(AppContext)
+    const { colorData, copyHexCode, copiedHexCode, userSelection } = useContext(AppContext)
 
     function isTouchDevice() {
         return 'ontouchstart' in window || navigator.msMaxTouchPoints > 0
@@ -29,7 +29,7 @@ function Color() {
         return (
             <div
                 key={item.hex.value}
-                onClick={() => handleColorSchemeClick(item.hex.value)}
+                onClick={() => copyHexCode(item.hex.value)}
                 onMouseEnter={() => handleMouseEnter(item.hex.value)}
                 onMouseLeave={handleMouseLeave}
                 style={divStyle}
