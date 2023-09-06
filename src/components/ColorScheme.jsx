@@ -13,7 +13,7 @@ function ColorScheme() {
                 <p className='p--large top--left'>Selected seed color:</p>
                 <p 
                     onClick={() => copyHexCode(userSelection.seed)}
-                    onMouseEnter={() => setText('Copy hex code')}
+                    onMouseEnter={() => setText('Copy')}
                     onMouseLeave={() => setText(userSelection.seed.toUpperCase())}
                     className='p--large top--right'
                 >
