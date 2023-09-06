@@ -14,7 +14,9 @@ function ColorPicker() {
     return (
         <div className="color-picker-wrapper">
             <div
+                tabIndex={0}
                 onClick={() => setIsOpen(true)}
+                // onKeyDown={() => setIsOpen(true)}
                 style={{
                     backgroundColor: userSelection.seed
                 }}
