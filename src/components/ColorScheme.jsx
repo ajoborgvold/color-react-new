@@ -1,26 +1,9 @@
-import { useContext, useState } from 'react'
+import { useContext } from 'react'
 import { AppContext } from '../context/AppContext'
 import Color from "./Color"
 
 function ColorScheme() {
-    // const [hoveredItem, setHoveredItem] = useState(null)
     const { userSelection, copyHexCode, copiedHexCode, hoveredItem, handleMouseEnter, handleMouseLeave } = useContext(AppContext)
-
-    // function isTouchDevice() {
-    //     return 'ontouchstart' in window || navigator.msMaxTouchPoints > 0
-    // }
-
-    // function handleMouseEnter(hex) {
-    //     if (!isTouchDevice()) {
-    //         setHoveredItem(hex)
-    //     }
-    // }
-    
-    // function handleMouseLeave() {
-    //     if (!isTouchDevice()) {
-    //         setHoveredItem(null)
-    //     }
-    // }
 
     return (
         <section className="color-scheme-container">
@@ -33,7 +16,7 @@ function ColorScheme() {
                     className='p--large top--right'
                 >
                     {copiedHexCode === userSelection.seed ? 'Copied!' :
-                     hoveredItem  === userSelection.seed ? 'Copy' : userSelection.seed}
+                        hoveredItem === userSelection.seed ? 'Copy' : userSelection.seed.toUpperCase()}
                 </p>
             </div>
             <div className='scheme-wrapper'>
