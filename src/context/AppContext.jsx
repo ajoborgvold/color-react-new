@@ -8,7 +8,6 @@ function AppContextProvider({children}) {
     const [copiedHexCode, setCopiedHexCode] = useState('')
     const [showColorPicker, setShowColorPicker] = useState(false)
     const [userSelection, setUserSelection] = useState({seed: '#5088c3', mode: 'monochrome'})
-    const [hoveredItem, setHoveredItem] = useState(null)
 
     useEffect(() => {
         if (firstRender.current) {
@@ -26,9 +25,6 @@ function AppContextProvider({children}) {
     }
 
     function handleColorSchemeClick(hex) {
-        // if (isTouchDevice()) {
-        //     setHoveredItem(hex)
-        // }
         navigator.clipboard.writeText(hex)
         setCopiedHexCode(hex)
         setTimeout(() => {
@@ -53,22 +49,6 @@ function AppContextProvider({children}) {
         setUserSelection({seed: newSeed, mode: newMode})
     }
 
-    function isTouchDevice() {
-        return 'ontouchstart' in window || navigator.msMaxTouchPoints > 0
-    }
-
-    function handleMouseEnter(hex) {
-        if (!isTouchDevice()) {
-            setHoveredItem(hex)
-        }
-    }
-    
-    function handleMouseLeave() {
-        if (!isTouchDevice()) {
-            setHoveredItem(null)
-        }
-        // setHoveredItem(null)
-    }
 
     return (
         <AppContext.Provider
@@ -81,10 +61,7 @@ function AppContextProvider({children}) {
                 showColorPicker,
                 handleColorPickerClick,
                 handleColorChange,
-                userSelection,
-                hoveredItem,
-                handleMouseEnter,
-                handleMouseLeave
+                userSelection
             }}
         >
             {children}
