@@ -229,7 +229,7 @@ p {
   color: var(--color-hex);
   font-family: var(--roboto-font);
   width: max-content;
-  padding: .375em .75em;
+  padding: .25em .5em;
   border: 1px solid var(--border-hex);
   border-radius: .3em;
   cursor: pointer;
