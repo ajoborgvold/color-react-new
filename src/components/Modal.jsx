@@ -1,27 +1,16 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import Typewriter from 'typewriter-effect';
-// import { IoClose } from 'react-icons/io'
-// import { AiOutlineCloseCircle } from 'react-icons/ai'
 
 function Modal() {
-    // const [showCloseIcon, setShowCloseIcon] = useState(false)
     const dialogRef = useRef(null)
 
     useEffect(() => {
         dialogRef.current.showModal()
-        // setTimeout(() => {
-        //     dialogRef.current.showModal()
-        // }, 1000)
 
         setTimeout(() => {
             dialogRef.current.close()
         }, 17000)
     }, [])
-
-    // function closeModal() {
-    //     console.log('clicked')
-    //     dialogRef.current.close()
-    // }
     
     function closeModalonClickOutside(e) {
         const dialogDimensions = dialogRef.current.getBoundingClientRect()
@@ -34,12 +23,6 @@ function Modal() {
             dialogRef.current.close()
         }
     }
-
-    // useEffect(() => {
-    //     setTimeout(() => {
-    //         setShowCloseIcon(true)
-    //     }, 100);
-    // }, [])
 
     const textArray = [
         "New to this app?",
@@ -54,7 +37,6 @@ function Modal() {
             <Typewriter
                 onInit={(typewriter) => {
                     typewriter
-                    // .pauseFor(1000)
                     .changeDelay(50)
                     .typeString(`<p>${textArray[0]}</p>`)
                     .pauseFor(1000)
@@ -70,8 +52,6 @@ function Modal() {
                     .start();
                 }}
                 />
-            {/* {showCloseIcon && <AiOutlineCloseCircle className='close-icon'/>} */}
-            {/* <button onClick={closeModal} className='btn close-btn'>Close</button> */}
         </dialog>
     );
 }
