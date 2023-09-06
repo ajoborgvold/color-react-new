@@ -3,26 +3,24 @@ import { AppContext } from '../context/AppContext'
 import Color from "./Color"
 
 function ColorScheme() {
-    const [hoveredItem, setHoveredItem] = useState(null)
-    const { userSelection, copyHexCode, copiedHexCode } = useContext(AppContext)
+    // const [hoveredItem, setHoveredItem] = useState(null)
+    const { userSelection, copyHexCode, copiedHexCode, hoveredItem, handleMouseEnter, handleMouseLeave } = useContext(AppContext)
 
-    // const [text, setText] = useState(userSelection.seed)
+    // function isTouchDevice() {
+    //     return 'ontouchstart' in window || navigator.msMaxTouchPoints > 0
+    // }
 
-    function isTouchDevice() {
-        return 'ontouchstart' in window || navigator.msMaxTouchPoints > 0
-    }
-
-    function handleMouseEnter(hex) {
-        if (!isTouchDevice()) {
-            setHoveredItem(hex)
-        }
-    }
+    // function handleMouseEnter(hex) {
+    //     if (!isTouchDevice()) {
+    //         setHoveredItem(hex)
+    //     }
+    // }
     
-    function handleMouseLeave() {
-        if (!isTouchDevice()) {
-            setHoveredItem(null)
-        }
-    }
+    // function handleMouseLeave() {
+    //     if (!isTouchDevice()) {
+    //         setHoveredItem(null)
+    //     }
+    // }
 
     return (
         <section className="color-scheme-container">
@@ -30,9 +28,7 @@ function ColorScheme() {
                 <p className='p--large top--left'>Selected seed color:</p>
                 <p 
                     onClick={() => copyHexCode(userSelection.seed)}
-                    // onMouseEnter={() => setText('Copy')}
                     onMouseEnter={() => handleMouseEnter(userSelection.seed)}
-                    // onMouseLeave={() => setText(userSelection.seed.toUpperCase())}
                     onMouseLeave={handleMouseLeave}
                     className='p--large top--right'
                 >
