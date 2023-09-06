@@ -3,7 +3,7 @@
 function Footer() {
     return (
         <footer className="footer">
-            <p className="p--small">Created by Ajo Borgvold</p>
+            <p className="p--medium">Created by Ajo Borgvold</p>
         </footer>
     )
 }
