@@ -13,7 +13,7 @@ function ColorScheme() {
                     onClick={() => copyHexCode(userSelection.seed)}
                     onMouseEnter={() => handleMouseEnter(userSelection.seed)}
                     onMouseLeave={handleMouseLeave}
-                    className='p--large top--right'
+                    className='p--medium top--right'
                 >
                     {copiedHexCode === userSelection.seed ? 'Copied!' :
                         hoveredItem === userSelection.seed ? 'Copy' : userSelection.seed.toUpperCase()}
