@@ -2,7 +2,7 @@ import { useContext } from "react"
 import { AppContext } from "../context/AppContext"
 
 function Color() {
-    const { colorData, copyHexCode, copiedHexCode } = useContext(AppContext)
+    const { colorData, copyHexCode, copiedHexCode, userSelection } = useContext(AppContext)
 
     const colorEl = colorData.map(item => {
         const divStyle = {
@@ -17,7 +17,7 @@ function Color() {
                 className="color-item"
             >
                 {
-                    !copiedHexCode ?
+                    !copiedHexCode || copiedHexCode === userSelection.seed ?
                         <p className="p--small color__p">{item.hex.value}</p> :
                         copiedHexCode && item.hex.value === copiedHexCode ?
                             <p className="p--small color__p">Copied!</p> :
