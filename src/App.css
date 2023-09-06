@@ -216,7 +216,7 @@ body[data-theme="light"] {
   grid-template-columns: repeat(2, 1fr);
   /* justify-content: space-between; */
   align-items: center;
-  gap: 2em;
+  gap: 1em;
   /* width: 90%; */
   margin: 0 auto;
 }
