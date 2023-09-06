@@ -26,9 +26,9 @@ function AppContextProvider({children}) {
     }
 
     function handleColorSchemeClick(hex) {
-        if (isTouchDevice()) {
-            setHoveredItem(hex)
-        }
+        // if (isTouchDevice()) {
+        //     setHoveredItem(hex)
+        // }
         navigator.clipboard.writeText(hex)
         setCopiedHexCode(hex)
         setTimeout(() => {
@@ -64,10 +64,10 @@ function AppContextProvider({children}) {
     }
     
     function handleMouseLeave() {
-        // if (!isTouchDevice()) {
-        //     setHoveredItem(null)
-        // }
-        setHoveredItem(null)
+        if (!isTouchDevice()) {
+            setHoveredItem(null)
+        }
+        // setHoveredItem(null)
     }
 
     return (
