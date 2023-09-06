@@ -60,7 +60,8 @@ body[data-theme="light"] {
   background-color: #28496c;
   color: #fff;
   font-weight: 300;
-  padding: .5em 1em;
+  /* padding: .5em 1em; */
+  padding: .25 .5em;
   border: 1px solid #3D4B60;
   border-radius: .3em;
   cursor: pointer;
@@ -165,7 +166,7 @@ body[data-theme="light"] {
   grid-area: btn;
   justify-self: end;
   font-family: var(--inter-font);
-  font-size: 1rem;
+  font-size: .875rem;
   width: max-content;
 }
 
