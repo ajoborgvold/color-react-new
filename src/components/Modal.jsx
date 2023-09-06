@@ -1,5 +1,7 @@
 import React, { useEffect, useRef } from 'react';
-// import ReactTyped from 'react-typed';
+import Typewriter from 'typewriter-effect';
+// import { IoClose } from 'react-icons/io'
+import { AiOutlineCloseCircle } from 'react-icons/ai'
 
 function Modal() {
     const dialogRef = useRef(null)
@@ -11,25 +13,40 @@ function Modal() {
 
         setTimeout(() => {
             dialogRef.current.close()
-        }, 18000)
+        }, 17000)
     }, [])
 
     const textArray = [
-        "Welcome!",
-        "1. Choose a seed color by clicking the color swatch.",
+        "New to this app?",
+        "Let's get started!",
+        "1. Click the color swatch to choose a seed color.",
         "2. Choose a color mode from the dropdown menu.",
         "3. Click the button!"
     ]
 
     return (
         <dialog ref={dialogRef} className='modal'>
-            <p>Test</p>
-            {/* <ReactTyped
-                strings={textArray}
-                typeSpeed={60}
-                backSpeed={5}
-                startDelay={1100}
-            /> */}
+            {setTimeout(() => {
+                <AiOutlineCloseCircle />
+            }, 1000)}
+            <Typewriter
+                onInit={(typewriter) => {
+                    typewriter.pauseFor(1000)
+                        .changeDelay(50)
+                        .typeString(`<p>${textArray[0]}</p>`)
+                        .pauseFor(1000)
+                        .deleteAll(`<p>${textArray[0]}</p>`)
+                        .typeString(`<p>${textArray[1]}</p>`)
+                        .pauseFor(1000)
+                        .deleteAll(`<p>${textArray[1]}</p>`)
+                        .typeString(`<p>${textArray[2]}</p>`)
+                        .pauseFor(1500)
+                        .typeString(`<p>${textArray[3]}</p>`)
+                        .pauseFor(1500)
+                        .typeString(`<p>${textArray[4]}</p>`)
+                        .start();
+                }}
+            />
         </dialog>
     );
 }
