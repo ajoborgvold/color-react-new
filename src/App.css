@@ -273,6 +273,10 @@ body[data-theme="light"] {
     grid-template-rows: auto;
     grid-template-areas: 'picker select btn';
   }
+
+  .color-btn {
+    margin-left: unset;
+  }
 }
 
 @media (min-width: 768px) {
