@@ -137,7 +137,7 @@ body[data-theme="light"] {
 .select-element:hover,
 .select-element:focus,
 .select-element:active {
-  box-shadow: 0 0 .25em 1px #fff;
+  box-shadow: 0 0 .25em 1px var(--box-shadow);
 
 }
 
