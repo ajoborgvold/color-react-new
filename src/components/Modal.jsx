@@ -10,7 +10,7 @@ function Modal() {
 
         setTimeout(() => {
             dialogRef.current.close()
-        }, 20000)
+        }, 21000)
     }, [])
     
 //--- Close the modal by clicken anywhere outside of it ---//
@@ -41,20 +41,16 @@ function Modal() {
                 onInit={typewriter => {
                     typewriter
                     .changeDelay(40)
-                    // .changeDeleteSpeed(1)
                     .typeString(`<p class="modal__p">${textArray[0]}</p>`)
                     .pauseFor(1000)
-                    // .deleteAll(`<p class="modal__p">${textArray[0]}</p>`)
                     .typeString(`<p class="modal__p">${textArray[1]}</p>`)
                     .pauseFor(1000)
-                    // .deleteAll(`<p class="modal__p">${textArray[1]}</p>`)
                     .typeString(`<p class="modal__p">${textArray[2]}</p>`)
                     .pauseFor(1000)
                     .typeString(`<p class="modal__p">${textArray[3]}</p>`)
                     .pauseFor(1000)
                     .typeString(`<p class="modal__p">${textArray[4]}</p>`)
                     .pauseFor(1000)
-                    // .deleteAll(`<p class="modal__p">${textArray[2]}</p><p class="modal__p">${textArray[3]}</p><p class="modal__p">${textArray[4]}</p>`)
                     .typeString(`<p class="modal__p">${textArray[5]}</p>`)
                     .start();
                 }}
