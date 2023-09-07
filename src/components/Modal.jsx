@@ -8,9 +8,9 @@ function Modal() {
     useEffect(() => {
         dialogRef.current.showModal()
 
-        // setTimeout(() => {
-        //     dialogRef.current.close()
-        // }, 18000)
+        setTimeout(() => {
+            dialogRef.current.close()
+        }, 18000)
     }, [])
     
 //--- Close the modal by clicken anywhere outside of it ---//
