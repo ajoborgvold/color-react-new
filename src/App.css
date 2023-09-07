@@ -7,7 +7,7 @@
 
 body {
   --inter-font: 'Inter', sans-serif;
-  --roboto-font: 'Roboto Mono', monospace;  
+  /* --roboto-font: 'Roboto Mono', monospace; */
   --bg-primary: #242424;
   --bg-primary-opacity: #24242480;
   --color-primary: #DEE4ED;
