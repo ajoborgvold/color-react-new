@@ -12,8 +12,11 @@ function ColorScheme() {
                 <p
                     tabIndex={0}
                     onClick={() => copyHexCode(userSelection.seed)}
+                    onKeyDown={e => copyHexCode(userSelection.seed, e)}
                     onMouseEnter={() => handleMouseEnter(userSelection.seed)}
+                    onFocus={() => handleMouseEnter(userSelection.seed)}
                     onMouseLeave={handleMouseLeave}
+                    onBlur={handleMouseLeave}
                     className='p--roboto top--right'
                 >
                     {copiedHexCode === userSelection.seed ? 'Copied!' :
