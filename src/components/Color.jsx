@@ -20,14 +20,14 @@ function Color() {
                 onMouseLeave={handleMouseLeave}
                 onBlur={handleMouseLeave}
                 style={divStyle}
-                className="color-item"
+                className="scheme__item"
             >
                 {!copiedHexCode || copiedHexCode === userSelection.seed ?
-                    <p className="color__p">
-                        {hoveredItem === item.hex.value ? 'Copy hex code' : item.hex.value}
+                    <p className="scheme__p">
+                        {hoveredItem === item.hex.value ? 'Copy' : item.hex.value}
                     </p> :
                     copiedHexCode && item.hex.value === copiedHexCode ?
-                        <p className="color__p">Copied!</p> : null
+                        <p className="scheme__p">Copied!</p> : null
                 }
             </div>
         )
