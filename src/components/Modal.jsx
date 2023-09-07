@@ -10,7 +10,7 @@ function Modal() {
 
         setTimeout(() => {
             dialogRef.current.close()
-        }, 18000)
+        }, 25000)
     }, [])
     
 //--- Close the modal by clicken anywhere outside of it ---//
@@ -31,7 +31,8 @@ function Modal() {
         "Here's how it works:",
         "1. Click the color swatch to choose a seed color.",
         "2. Choose a color mode from the dropdown menu.",
-        "3. Click the button!"
+        "3. Generate a color scheme by clicking the button.",
+        "Click any color code to copy it!"
     ]
 
     return (
@@ -51,6 +52,9 @@ function Modal() {
                     .typeString(`<p class="modal__p">${textArray[3]}</p>`)
                     .pauseFor(1000)
                     .typeString(`<p class="modal__p">${textArray[4]}</p>`)
+                    .pauseFor(2000)
+                    .deleteAll(`<p class="modal__p">${textArray[2]}</p><p class="modal__p">${textArray[3]}</p><p class="modal__p">${textArray[4]}</p>`)
+                    .typeString(`<p class="modal__p">${textArray[5]}</p>`)
                     .start();
                 }}
             />
