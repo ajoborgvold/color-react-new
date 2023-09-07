@@ -4,11 +4,11 @@ const AppContext = createContext()
 
 function AppContextProvider({children}) {
     const [colorData, setColorData] = useState([])
-    const firstRender = useRef(true)
-    const [copiedHexCode, setCopiedHexCode] = useState('')
     const [showColorPicker, setShowColorPicker] = useState(false)
     const [userSelection, setUserSelection] = useState({seed: '#5088c3', mode: 'monochrome'})
     const [hoveredItem, setHoveredItem] = useState(null)
+    const [copiedHexCode, setCopiedHexCode] = useState('')
+    const firstRender = useRef(true)
 
     useEffect(() => {
         if (firstRender.current) {
@@ -17,6 +17,11 @@ function AppContextProvider({children}) {
         }
     }, [])
 
+//--- Check if the user is on a touch device or not ---//
+    function isTouchDevice() {
+        return 'ontouchstart' in window || navigator.msMaxTouchPoints > 0
+    }
+
     async function callApi(e) {
         e && e.preventDefault()
 
@@ -24,13 +29,10 @@ function AppContextProvider({children}) {
         const data = await res.json()
         setColorData(data.colors)
     }
-
-    function copyHexCode(hex) {
-        navigator.clipboard.writeText(hex)
-        setCopiedHexCode(hex)
-        setTimeout(() => {
-            setCopiedHexCode('')
-        }, 2000)
+    
+//--- Handle rendering of and data gathering from the form elements ---//
+    function handleColorPickerClick() {
+        setShowColorPicker(!showColorPicker)
     }
 
     function handleModeChange(e) {
@@ -38,11 +40,7 @@ function AppContextProvider({children}) {
         updateUserSelection(userSelection.seed, newMode)
     }
 
-    function handleColorPickerClick() {
-        setShowColorPicker(!showColorPicker)
-    }
-
-    function handleColorChange(newColor) {
+    function handleSeedColorChange(newColor) {
         updateUserSelection(newColor, userSelection.mode)
     }
 
@@ -50,10 +48,8 @@ function AppContextProvider({children}) {
         setUserSelection({seed: newSeed, mode: newMode})
     }
 
-    function isTouchDevice() {
-        return 'ontouchstart' in window || navigator.msMaxTouchPoints > 0
-    }
-
+//--- If the user is on a touch device, the if statements in the handleMouseEnter and handleMouseLeave functions will not run ---//
+//--- This ensures a better user experience on touch devices ---//
     function handleMouseEnter(hex) {
         if (!isTouchDevice()) {
             setHoveredItem(hex)
@@ -66,22 +62,32 @@ function AppContextProvider({children}) {
         }
     }
 
+//--- Copy hex code, either the selected seed code or one from the generated color scheme ---//
+    function copyHexCode(hex, e) {
+        if (e?.key === 'Enter' || !e) {
+            navigator.clipboard.writeText(hex)
+            setCopiedHexCode(hex)
+            setTimeout(() => {
+                setCopiedHexCode('')
+            }, 2000)
+        }
+    }
 
     return (
         <AppContext.Provider
             value={{
                 colorData,
                 callApi,
-                copyHexCode,
-                copiedHexCode,
-                handleModeChange,
                 showColorPicker,
                 handleColorPickerClick,
-                handleColorChange,
+                handleSeedColorChange,
+                handleModeChange,
                 userSelection,
                 hoveredItem,
                 handleMouseEnter,
-                handleMouseLeave
+                handleMouseLeave,
+                copyHexCode,
+                copiedHexCode,
             }}
         >
             {children}
