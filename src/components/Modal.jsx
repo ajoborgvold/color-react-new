@@ -10,7 +10,7 @@ function Modal() {
 
         setTimeout(() => {
             dialogRef.current.close()
-        }, 20000)
+        }, 18000)
     }, [])
     
 //--- Close the modal by clicken anywhere outside of it ---//
@@ -28,11 +28,11 @@ function Modal() {
 
     const textArray = [
         "Welcome!",
-        "Here's how this app works:",
+        "Let's get started.",
         "1. Click the color swatch to choose a seed color.",
         "2. Choose a color mode from the dropdown menu.",
         "3. Generate a color scheme by clicking the button.",
-        "4. Click any color code to copy it!"
+        "4. Click any color code to copy it."
     ]
 
     return (
