@@ -4,14 +4,16 @@ import Typewriter from 'typewriter-effect';
 function Modal() {
     const dialogRef = useRef(null)
 
+//--- Open the modal on the first render. Close the modal when all text has been rendered using the typewriter effect ---//
     useEffect(() => {
         dialogRef.current.showModal()
 
-        setTimeout(() => {
-            dialogRef.current.close()
-        }, 18000)
+        // setTimeout(() => {
+        //     dialogRef.current.close()
+        // }, 18000)
     }, [])
     
+//--- Close the modal by clicken anywhere outside of it ---//
     function closeModalonClickOutside(e) {
         const dialogDimensions = dialogRef.current.getBoundingClientRect()
         if (
@@ -35,23 +37,23 @@ function Modal() {
     return (
         <dialog ref={dialogRef} onClick={closeModalonClickOutside} className='modal'>
             <Typewriter
-                onInit={(typewriter) => {
+                onInit={typewriter => {
                     typewriter
                     .changeDelay(50)
-                    .typeString(`<p>${textArray[0]}</p>`)
+                    .typeString(`<p class="modal__p">${textArray[0]}</p>`)
                     .pauseFor(1000)
-                    .deleteAll(`<p>${textArray[0]}</p>`)
-                    .typeString(`<p>${textArray[1]}</p>`)
+                    .deleteAll(`<p class="modal__p">${textArray[0]}</p>`)
+                    .typeString(`<p class="modal__p">${textArray[1]}</p>`)
                     .pauseFor(1000)
-                    .deleteAll(`<p>${textArray[1]}</p>`)
-                    .typeString(`<p>${textArray[2]}</p>`)
+                    .deleteAll(`<p class="modal__p">${textArray[1]}</p>`)
+                    .typeString(`<p class="modal__p">${textArray[2]}</p>`)
                     .pauseFor(1000)
-                    .typeString(`<p>${textArray[3]}</p>`)
+                    .typeString(`<p class="modal__p">${textArray[3]}</p>`)
                     .pauseFor(1000)
-                    .typeString(`<p>${textArray[4]}</p>`)
+                    .typeString(`<p class="modal__p">${textArray[4]}</p>`)
                     .start();
                 }}
-                />
+            />
         </dialog>
     );
 }
