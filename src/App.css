@@ -221,7 +221,7 @@ p {
   max-width: 1000px;
   height: 100%;
   margin: 1em auto 0;
-  box-shadow: 0 0 .5em var(--color-primary);
+  box-shadow: 0 0 0 1px var(--bg-primary), 0 0 .5em var(--color-primary);
 }
 
 .scheme__item {
