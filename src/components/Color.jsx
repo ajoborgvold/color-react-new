@@ -24,7 +24,7 @@ function Color() {
             >
                 {!copiedHexCode || copiedHexCode === userSelection.seed ?
                     <p className="color__p">
-                        {hoveredItem === item.hex.value ? 'Copy code' : item.hex.value}
+                        {hoveredItem === item.hex.value ? 'Copy hex code' : item.hex.value}
                     </p> :
                     copiedHexCode && item.hex.value === copiedHexCode ?
                         <p className="color__p">Copied!</p> : null
