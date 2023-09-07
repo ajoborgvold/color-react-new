@@ -6,8 +6,7 @@
 }
 
 body {
-  --inter-font: 'Inter', sans-serif;
-  /* --roboto-font: 'Roboto Mono', monospace; */
+  /* --inter-font: 'Inter', sans-serif; */
   --bg-primary: #242424;
   --bg-primary-opacity: #24242480;
   --color-primary: #DEE4ED;
@@ -20,7 +19,7 @@ body {
 
   background-color: var(--bg-primary);
   color: var(--color-primary);
-  font-family: var(--inter-font);
+  font-family: 'Inter', sans-serif;
 }
 
 body[data-theme="light"] {
@@ -53,17 +52,8 @@ p {
   font-weight: 300;
 }
 
-/* .p--inter {
-  font-family: var(--inter-font);
-}
-
-.p--roboto {
-  font-family: var(--roboto-font);
-} */
-
 /* Buttons */
 .btn {
-  /* font-family: var(--inter-font); */
   font-family: inherit;
   background-color: #28496c;
   color: #fff;
@@ -103,7 +93,6 @@ p {
 }
 
 .theme-btn {
-  /* font-weight: 300; */
   padding: .25em .5em;
 }
 
@@ -114,8 +103,8 @@ p {
   grid-template-columns: repeat(2, auto);
   grid-template-rows: repeat(2, 1fr);
   grid-template-areas: 
-  'select select'
-  'picker btn';
+    'select select'
+    'picker btn';
   gap: .5em;
   max-width: 768px;
   margin: 0 auto;
@@ -132,7 +121,6 @@ p {
 .select-element {
   background-color: var(--bg-primary);
   color: var(--color-primary);
-  /* font-family: var(--inter-font); */
   font-family: inherit;
   font-size: .875rem;
   height: 100%;
@@ -169,7 +157,6 @@ p {
 .color-btn {
   grid-area: btn;
   justify-self: end;
-  /* font-family: var(--inter-font); */
   width: max-content;
   margin-left: 1em;
   padding: .375em .75em;
@@ -218,7 +205,6 @@ p {
 .top--right {
   background-color: var(--bg-hex);
   color: var(--color-hex);
-  /* font-family: var(--roboto-font); */
   width: max-content;
   padding: .25em .5em;
   border: 1px solid var(--border-hex);
@@ -256,7 +242,6 @@ p {
   transform: translate(-50%, -50%);
   background-color: var(--bg-hex);
   color: var(--color-hex);
-  /* font-family: var(--roboto-font); */
   padding: .5em 1em;
   border: 1px solid var(--border-hex);
   border-radius: .3em;
