@@ -5,16 +5,17 @@ import useClickOutside from "../utils/useClickOutside";
 
 function ColorPicker() {
     const [isOpen, setIsOpen] = useState(false)
-    const popover = useRef()
-    const swatch = useRef()
+    const popoverRef = useRef()
+    const swatchRef = useRef()
     const { handleSeedColorChange, userSelection } = useContext(AppContext)      
-
+    
+//--- Close the popover when the user clicks outside the color picker ---//
     const close = useCallback(() => setIsOpen(false), [])
 
-    useClickOutside(popover, close)
+    useClickOutside(popoverRef, close)
 
+//--- Handle keyboard navigation ---//    
     function handleKeyDownOnSwatch(e) {
-        console.log(e.key)
         if (e.key === 'Enter') {
             setIsOpen(true)
         } else if (e.key === 'Backspace') {
@@ -25,14 +26,14 @@ function ColorPicker() {
     function handleKeyDownOnPopover(e) {
         if (e.key === 'Backspace') {
             setIsOpen(false)
-            swatch.current.focus()
+            swatchRef.current.focus()
         }
     }
 
     return (
         <div className="color-picker-wrapper">
             <div
-                ref={swatch}
+                ref={swatchRef}
                 tabIndex={0}
                 onClick={() => setIsOpen(true)}
                 onKeyDown={handleKeyDownOnSwatch}
@@ -44,7 +45,7 @@ function ColorPicker() {
             </div>
             {isOpen && (
                 <div 
-                    ref={popover}
+                    ref={popoverRef}
                     onKeyDown={handleKeyDownOnPopover}
                     className="popover"
                 >
