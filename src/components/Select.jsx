@@ -23,7 +23,7 @@ function Select() {
 
     return (
         <div className="select-wrapper">
-            <label htmlFor="mode" className="label">Select color mode</label>
+            <label htmlFor="mode" className="label">Select a color mode</label>
             <select onChange={handleModeChange} name="mode" id="mode" className="select-element">
                 {optionsEL}
             </select>
