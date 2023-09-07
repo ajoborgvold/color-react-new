@@ -78,6 +78,10 @@ p {
   box-shadow: 0 0 .5em 1px var(--color-primary);
 }
 
+.modal__p {
+  margin: .5em 0;
+}
+
 .modal::backdrop {
   background-color: var(--bg-primary-opacity);
 }
