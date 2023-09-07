@@ -41,6 +41,7 @@ function Modal() {
                 onInit={typewriter => {
                     typewriter
                     .changeDelay(50)
+                    .changeDeleteSpeed(1)
                     .typeString(`<p class="modal__p">${textArray[0]}</p>`)
                     .pauseFor(1000)
                     .deleteAll(`<p class="modal__p">${textArray[0]}</p>`)
@@ -52,7 +53,7 @@ function Modal() {
                     .typeString(`<p class="modal__p">${textArray[3]}</p>`)
                     .pauseFor(1000)
                     .typeString(`<p class="modal__p">${textArray[4]}</p>`)
-                    .pauseFor(2000)
+                    .pauseFor(1500)
                     .deleteAll(`<p class="modal__p">${textArray[2]}</p><p class="modal__p">${textArray[3]}</p><p class="modal__p">${textArray[4]}</p>`)
                     .typeString(`<p class="modal__p">${textArray[5]}</p>`)
                     .start();
