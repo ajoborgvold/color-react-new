@@ -10,7 +10,7 @@ function Modal() {
 
         setTimeout(() => {
             dialogRef.current.close()
-        }, 25000)
+        }, 18000)
     }, [])
     
 //--- Close the modal by clicken anywhere outside of it ---//
@@ -27,12 +27,12 @@ function Modal() {
     }
 
     const textArray = [
-        "New to this app?",
-        "Here's how it works:",
+        "Welcome!",
+        "Here's how this app works:",
         "1. Click the color swatch to choose a seed color.",
         "2. Choose a color mode from the dropdown menu.",
         "3. Generate a color scheme by clicking the button.",
-        "Click any color code to copy it!"
+        "4. Click any color code to copy it!"
     ]
 
     return (
@@ -44,17 +44,17 @@ function Modal() {
                     .changeDeleteSpeed(1)
                     .typeString(`<p class="modal__p">${textArray[0]}</p>`)
                     .pauseFor(1000)
-                    .deleteAll(`<p class="modal__p">${textArray[0]}</p>`)
+                    // .deleteAll(`<p class="modal__p">${textArray[0]}</p>`)
                     .typeString(`<p class="modal__p">${textArray[1]}</p>`)
                     .pauseFor(1000)
-                    .deleteAll(`<p class="modal__p">${textArray[1]}</p>`)
+                    // .deleteAll(`<p class="modal__p">${textArray[1]}</p>`)
                     .typeString(`<p class="modal__p">${textArray[2]}</p>`)
                     .pauseFor(1000)
                     .typeString(`<p class="modal__p">${textArray[3]}</p>`)
                     .pauseFor(1000)
                     .typeString(`<p class="modal__p">${textArray[4]}</p>`)
-                    .pauseFor(1500)
-                    .deleteAll(`<p class="modal__p">${textArray[2]}</p><p class="modal__p">${textArray[3]}</p><p class="modal__p">${textArray[4]}</p>`)
+                    .pauseFor(1000)
+                    // .deleteAll(`<p class="modal__p">${textArray[2]}</p><p class="modal__p">${textArray[3]}</p><p class="modal__p">${textArray[4]}</p>`)
                     .typeString(`<p class="modal__p">${textArray[5]}</p>`)
                     .start();
                 }}
