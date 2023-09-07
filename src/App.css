@@ -20,6 +20,7 @@ body {
 
   background-color: var(--bg-primary);
   color: var(--color-primary);
+  font-family: var(--inter-font);
 }
 
 body[data-theme="light"] {
@@ -52,17 +53,18 @@ p {
   font-weight: 300;
 }
 
-.p--inter {
+/* .p--inter {
   font-family: var(--inter-font);
 }
 
 .p--roboto {
   font-family: var(--roboto-font);
-}
+} */
 
 /* Buttons */
 .btn {
-  font-family: var(--inter-font);
+  /* font-family: var(--inter-font); */
+  font-family: inherit;
   background-color: #28496c;
   color: #fff;
   font-size: .875rem;
@@ -89,10 +91,6 @@ p {
   box-shadow: 0 0 .5em 1px var(--box-shadow);
 }
 
-.modal > p {
-  /* font-family: var(--roboto-font); */
-}
-
 .modal::backdrop {
   background-color: #24242480;
 }
@@ -105,7 +103,7 @@ p {
 }
 
 .theme-btn {
-  font-weight: 300;
+  /* font-weight: 300; */
   padding: .25em .5em;
 }
 
@@ -134,7 +132,8 @@ p {
 .select-element {
   background-color: var(--bg-primary);
   color: var(--color-primary);
-  font-family: var(--inter-font);
+  /* font-family: var(--inter-font); */
+  font-family: inherit;
   font-size: .875rem;
   height: 100%;
   min-height: 2em;
@@ -170,7 +169,7 @@ p {
 .color-btn {
   grid-area: btn;
   justify-self: end;
-  font-family: var(--inter-font);
+  /* font-family: var(--inter-font); */
   width: max-content;
   margin-left: 1em;
   padding: .375em .75em;
@@ -219,7 +218,7 @@ p {
 .top--right {
   background-color: var(--bg-hex);
   color: var(--color-hex);
-  font-family: var(--roboto-font);
+  /* font-family: var(--roboto-font); */
   width: max-content;
   padding: .25em .5em;
   border: 1px solid var(--border-hex);
@@ -257,7 +256,7 @@ p {
   transform: translate(-50%, -50%);
   background-color: var(--bg-hex);
   color: var(--color-hex);
-  font-family: var(--roboto-font);
+  /* font-family: var(--roboto-font); */
   padding: .5em 1em;
   border: 1px solid var(--border-hex);
   border-radius: .3em;
@@ -282,14 +281,6 @@ p {
 
 /* Media queries */
 @media (min-width: 480px) {
-  /* .p--small {
-    font-size: .875rem;
-  }
-
-  .p--medium {
-    font-size: 1rem;
-  } */
-
   p {
     font-size: 1rem;
   }
@@ -303,14 +294,10 @@ p {
   .color-btn {
     margin-left: unset;
   }
-
 }
 
-@media (min-width: 768px) {
-  /* .p--small {
-    font-size: 1rem;
-  } */
 
+@media (min-width: 768px) {
   .btn,
   .select-element {
     font-size: 1rem;
@@ -331,11 +318,8 @@ p {
   .color-wrapper {
     flex-direction: row;
   }
-/* 
-  .color__p {
-    font-size: 1rem;
-  } */
 }
+
 
 @media (min-width: 1024px) {
   .form {
