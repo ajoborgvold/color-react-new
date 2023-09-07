@@ -7,7 +7,7 @@ function ColorPicker() {
     const [isOpen, setIsOpen] = useState(false)
     const popover = useRef()
     const swatch = useRef()
-    const { handleColorChange, userSelection } = useContext(AppContext)      
+    const { handleSeedColorChange, userSelection } = useContext(AppContext)      
 
     const close = useCallback(() => setIsOpen(false), [])
 
@@ -50,7 +50,7 @@ function ColorPicker() {
                 >
                     <label htmlFor="color-picker" className="label">Select a seed color</label>
                     <HexColorPicker
-                        onChange={handleColorChange}
+                        onChange={handleSeedColorChange}
                         onFocus={() => setIsOpen(true)}
                         color={userSelection.seed}
                         id="color-picker"
