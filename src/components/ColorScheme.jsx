@@ -20,7 +20,7 @@ function ColorScheme() {
                     className='p--roboto top--right'
                 >
                     {copiedHexCode === userSelection.seed ? 'Copied!' :
-                        hoveredItem === userSelection.seed ? 'Copy' : userSelection.seed.toUpperCase()}
+                        hoveredItem === userSelection.seed ? 'Copy code' : userSelection.seed.toUpperCase()}
                 </p>
             </div>
             <div className='scheme-wrapper'>
