@@ -54,7 +54,8 @@ function Modal() {
                     .pauseFor(1000)
                     .typeString(`<p class="modal__p">${textArray[4]}</p>`)
                     .pauseFor(1500)
-                    .deleteAll(`<p class="modal__p">${textArray[2]}</p><p class="modal__p">${textArray[3]}</p><p class="modal__p">${textArray[4]}</p>`)
+                    .deleteAll()
+                    // .deleteAll(`<p class="modal__p">${textArray[2]}</p><p class="modal__p">${textArray[3]}</p><p class="modal__p">${textArray[4]}</p>`)
                     .typeString(`<p class="modal__p">${textArray[5]}</p>`)
                     .start();
                 }}
