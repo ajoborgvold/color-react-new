@@ -79,6 +79,7 @@ p {
 }
 
 .modal__p {
+  font-size: 1rem;
   margin: .5em 0;
 }
 
