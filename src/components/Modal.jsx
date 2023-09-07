@@ -10,7 +10,7 @@ function Modal() {
 
         setTimeout(() => {
             dialogRef.current.close()
-        }, 20500)
+        }, 20000)
     }, [])
     
 //--- Close the modal by clicken anywhere outside of it ---//
