@@ -26,7 +26,7 @@ function Modal() {
 
     const textArray = [
         "New to this app?",
-        "Let's get started!",
+        "Here's how it works:",
         "1. Click the color swatch to choose a seed color.",
         "2. Choose a color mode from the dropdown menu.",
         "3. Click the button!"
@@ -39,10 +39,10 @@ function Modal() {
                     typewriter
                     .changeDelay(50)
                     .typeString(`<p class="p--roboto">${textArray[0]}</p>`)
-                    .pauseFor(750)
+                    .pauseFor(1000)
                     .deleteAll(`<p class="p--roboto">${textArray[0]}</p>`)
                     .typeString(`<p class="p--roboto">${textArray[1]}</p>`)
-                    .pauseFor(750)
+                    .pauseFor(1000)
                     .deleteAll(`<p class="p--roboto">${textArray[1]}</p>`)
                     .typeString(`<p class="p--roboto">${textArray[2]}</p>`)
                     .pauseFor(1000)
