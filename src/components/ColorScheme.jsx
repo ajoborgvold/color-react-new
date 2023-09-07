@@ -8,7 +8,7 @@ function ColorScheme() {
     return (
         <section className="color-scheme-container">
             <div className='color-scheme-container__top'>
-                <p className='p--inter top--left'>Selected seed color:</p>
+                <p className='top__left'>Selected seed color:</p>
                 <p
                     tabIndex={0}
                     onClick={() => copyHexCode(userSelection.seed)}
@@ -17,10 +17,10 @@ function ColorScheme() {
                     onFocus={() => handleMouseEnter(userSelection.seed)}
                     onMouseLeave={handleMouseLeave}
                     onBlur={handleMouseLeave}
-                    className='p--roboto top--right'
+                    className='top__right'
                 >
                     {copiedHexCode === userSelection.seed ? 'Copied!' :
-                        hoveredItem === userSelection.seed ? 'Copy hex code' : userSelection.seed.toUpperCase()}
+                        hoveredItem === userSelection.seed ? 'Copy' : userSelection.seed.toUpperCase()}
                 </p>
             </div>
             <div className='scheme-wrapper'>
