@@ -7,8 +7,8 @@ function ColorPicker() {
     const [isOpen, setIsOpen] = useState(false)
     const popoverRef = useRef()
     const swatchRef = useRef()
-    const { handleSeedColorChange, userSelection } = useContext(AppContext)      
-    
+    const { handleSeedColorChange, userSelection } = useContext(AppContext)
+
 //--- Close the popover when the user clicks outside the color picker ---//
     const close = useCallback(() => setIsOpen(false), [])
 
