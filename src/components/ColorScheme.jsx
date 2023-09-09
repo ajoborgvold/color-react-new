@@ -3,7 +3,14 @@ import { AppContext } from '../context/AppContext'
 import Color from "./Color"
 
 function ColorScheme() {
-    const { userSelection, copyHexCode, copiedHexCode, hoveredItem, handleMouseEnter, handleMouseLeave } = useContext(AppContext)
+    const { 
+        userSelection,
+        copyHexCode,
+        copiedHexCode,
+        hoveredItem,
+        handleMouseEnter,
+        handleMouseLeave
+    } = useContext(AppContext)
 
     return (
         <section className="color-scheme-container">
