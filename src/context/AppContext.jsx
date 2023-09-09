@@ -29,12 +29,8 @@ function AppContextProvider({children}) {
         const data = await res.json()
         setColorData(data.colors)
     }
-    
-//--- Handle rendering of and data gathering from the form elements ---//
-    function handleColorPickerClick() {
-        setShowColorPicker(!showColorPicker)
-    }
 
+//--- Handle rendering of and data gathering from the form elements ---//
     function handleModeChange(e) {
         const newMode = e.target.value
         updateUserSelection(userSelection.seed, newMode)
@@ -79,7 +75,7 @@ function AppContextProvider({children}) {
                 colorData,
                 callApi,
                 showColorPicker,
-                handleColorPickerClick,
+                setShowColorPicker,
                 handleSeedColorChange,
                 handleModeChange,
                 userSelection,
