@@ -1,7 +1,6 @@
 import { useState, useEffect, useContext } from "react"
 import { AppContext } from "../context/AppContext"
 
-
 function Header() {
     const [theme, setTheme] = useState('light')
     const { setShowColorPicker } = useContext(AppContext)
