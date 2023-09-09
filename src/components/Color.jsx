@@ -2,7 +2,15 @@ import { useContext } from "react"
 import { AppContext } from "../context/AppContext"
 
 function Color() {
-    const { colorData, copyHexCode, copiedHexCode, userSelection, hoveredItem, handleMouseEnter, handleMouseLeave } = useContext(AppContext)
+    const {
+        colorData,
+        copyHexCode,
+        copiedHexCode,
+        userSelection,
+        hoveredItem,
+        handleMouseEnter,
+        handleMouseLeave
+    } = useContext(AppContext)
 
     const colorEl = colorData.map(item => {
         const divStyle = {
@@ -33,11 +41,7 @@ function Color() {
         )
     })
 
-    return (
-        <>
-            {colorEl}
-        </>
-    )
+    return (<>{colorEl}</>)
 }
 
 export default Color
