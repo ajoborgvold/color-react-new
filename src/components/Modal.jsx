@@ -14,7 +14,7 @@ function Modal() {
     }, [])
     
 //--- Close the modal by clicken anywhere outside of it ---//
-    function closeModalonClickOutside(e) {
+    function closeModalOnClickOutside(e) {
         const dialogDimensions = dialogRef.current.getBoundingClientRect()
         if (
             e.clientX < dialogDimensions.left ||
@@ -36,7 +36,7 @@ function Modal() {
     ]
 
     return (
-        <dialog ref={dialogRef} onClick={closeModalonClickOutside} className='modal'>
+        <dialog ref={dialogRef} onClick={closeModalOnClickOutside} className='modal'>
             <Typewriter
                 onInit={typewriter => {
                     typewriter
@@ -56,7 +56,7 @@ function Modal() {
                 }}
             />
         </dialog>
-    );
+    )
 }
 
 export default Modal
