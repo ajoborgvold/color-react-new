@@ -15,7 +15,7 @@ function useClickOutside(ref, handler) {
         function validateEventStart(e) {
             startedWhenMounted = ref.current
             startedInside = ref.current && ref.current.contains(e.target)
-        };
+        }
 
         document.addEventListener("mousedown", validateEventStart)
         document.addEventListener("touchstart", validateEventStart)
@@ -25,8 +25,8 @@ function useClickOutside(ref, handler) {
             document.removeEventListener("mousedown", validateEventStart)
             document.removeEventListener("touchstart", validateEventStart)
             document.removeEventListener("click", listener)
-        };
+        }
     }, [ref, handler])
-};
+}
 
 export default useClickOutside
