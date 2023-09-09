@@ -12,10 +12,8 @@ body {
   --color-primary: #DEE4ED;
   --border-primary: #242424;
   --border-hover: #DEE4ED;
-  --box-shadow: #DEE4ED;
   --btn-bg: #28496c;
   --btn-color: #DEE4ED;
-  --swatch-border: #DEE4ED;
   --hex-bg: #242424;
   --hex-color: #DEE4ED;
   --hex-border: #DEE4ED;
@@ -29,8 +27,6 @@ body[data-theme="light"] {
   --bg-primary: #DEE4ED;
   --color-primary: #242424;
   --border-primary: #DEE4ED;
-  --box-shadow: #242424;
-  --swatch-border: #242424;
 }
 
 .app-container {
