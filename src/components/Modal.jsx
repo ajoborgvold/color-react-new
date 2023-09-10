@@ -4,7 +4,7 @@ import Typewriter from 'typewriter-effect';
 function Modal() {
     const dialogRef = useRef(null)
 
-//--- Open the modal on the first render. Close the modal when all text has been rendered using the typewriter effect ---//
+// Open the modal on the first render. Close the modal when all text has been rendered using the typewriter effect
     useEffect(() => {
         dialogRef.current.showModal()
 
@@ -13,7 +13,7 @@ function Modal() {
         }, 19000)
     }, [])
     
-//--- Close the modal by clicken anywhere outside of it ---//
+// Close the modal by clicken anywhere outside of it
     function closeModalOnClickOutside(e) {
         const dialogDimensions = dialogRef.current.getBoundingClientRect()
         if (
