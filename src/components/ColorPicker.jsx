@@ -12,7 +12,7 @@ function ColorPicker() {
         setShowColorPicker
     } = useContext(AppContext)
 
-//--- Close the popover when the user clicks outside the color picker ---//
+// Close the popover when the user clicks outside the color picker
     const close = useCallback(() => setShowColorPicker(false), [])
     useClickOutside(popoverRef, close)
 
