@@ -17,7 +17,7 @@ function AppContextProvider({children}) {
         }
     }, [])
 
-//--- Check if the user is on a touch device or not ---//
+// Check if the user is on a touch device or not
     function isTouchDevice() {
         return 'ontouchstart' in window || navigator.msMaxTouchPoints > 0
     }
@@ -30,7 +30,7 @@ function AppContextProvider({children}) {
         setColorData(data.colors)
     }
 
-//--- Handle rendering of and data gathering from the form elements ---//
+// Handle rendering of and data gathering from the form elements
     function handleModeChange(e) {
         const newMode = e.target.value
         updateUserSelection(userSelection.seed, newMode)
@@ -44,8 +44,8 @@ function AppContextProvider({children}) {
         setUserSelection({seed: newSeed, mode: newMode})
     }
 
-//--- If the user is on a touch device, the if statements in the handleMouseEnter and handleMouseLeave functions will not run ---//
-//--- This ensures a better user experience on touch devices ---//
+// If the user is on a touch device, the if statements in the handleMouseEnter and handleMouseLeave functions will not run
+// This ensures a better user experience on touch devices
     function handleMouseEnter(hex) {
         if (!isTouchDevice()) {
             setHoveredItem(hex)
@@ -58,7 +58,7 @@ function AppContextProvider({children}) {
         }
     }
 
-//--- Copy hex code, either the selected seed code or one from the generated color scheme ---//
+// Copy hex code, either the selected seed code or one from the generated color scheme
     function copyHexCode(hex, e) {
         if (e?.key === 'Enter' || !e) {
             navigator.clipboard.writeText(hex)
