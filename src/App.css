@@ -45,6 +45,7 @@ p {
   font-weight: 300;
 }
 
+
 /* Buttons */
 .btn {
   font-family: inherit;
@@ -63,6 +64,7 @@ p {
   border: 1px solid var(--border-hover);
   box-shadow: 0 0 .375em 1px var(--color-primary);
 }
+
 
 /* Modal */
 .modal {
@@ -279,10 +281,7 @@ p {
 
 
 @media (min-width: 768px) {
-  p {
-    font-size: 1rem;
-  }
-
+  p,
   .btn,
   .select-element {
     font-size: 1rem;
