@@ -9,7 +9,7 @@ import Modal from './components/Modal'
 function App() {
   const [isNewUser, setIsNewUser] = useState(false)
 
-//--- Check if it is a new user or not. If new user, the modal will be rendered, if not the modal will not be rendered --///
+// Check if it is a new user or not. If new user, render the modal
   useEffect(() => {
     const isUserInLocalStorage = localStorage.getItem('isNewUser')
     !isUserInLocalStorage && setIsNewUser(true)
