@@ -1,9 +1,7 @@
-import { useState, useEffect, useContext } from "react"
-import { AppContext } from "../context/AppContext"
+import { useState, useEffect } from "react"
 
 function Header() {
     const [theme, setTheme] = useState('light')
-    const { setShowColorPicker } = useContext(AppContext)
 
 // Handle the user's theme preferences
     useEffect(() => {
@@ -52,7 +50,6 @@ function Header() {
         <header className="header">
             <button 
                 onClick={toggleTheme} 
-                onFocus={() => setShowColorPicker(false)} 
                 className="btn theme-btn"
             >
                 {theme === 'light' ? 'Dark' : 'Light'}
