@@ -1,6 +1,6 @@
 # Color scheme generator
 An app that allows you to generate color schemes based on your selection of seed color and color mode. The UI is built with React.js and the color data is fetched from [The Color Api](https://www.thecolorapi.com/).  
-This is a rebuilt of a vanilla JavaScript app. The original app had some issues with the UI/UX and with accessibility, so this rebuilt is all about implementing improvements on those areas.
+This is a rebuilt of a vanilla JavaScript color scheme generator. The original app had some issues with the UI/UX and with accessibility, so this rebuilt is all about implementing improvements on those areas.
 
 ## In this document:
 1. [App URL](#app-url)
