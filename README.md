@@ -39,7 +39,7 @@ This is a rebuilt of a vanilla JavaScript color scheme generator. The original a
 2. Keyboard navigation was not possible.
 
 ### Improvements
-1. To maintain the clean design that I was going for, the labels are still hidden from the screen, but the CSS rules are changed and optimized to ensure that the labels are now accessible to screen readers.
+1. To maintain the clean design that I was aiming for, the labels are still hidden from the screen, but the CSS rules are changed and optimized to ensure that the labels are now accessible to screen readers.
 2. Every clickable element is now accessible with keyboard navigation and the entire functional logic has been refactored to ensure an equally good UX for all users.
 
 
