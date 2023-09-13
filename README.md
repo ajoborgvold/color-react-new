@@ -5,8 +5,8 @@ This is a rebuilt of a similar app that I built in vanilla JavaScript. The origi
 ## In this document:
 1. [App URL](#app-url)
 2. [Technologies used](#technologies-used)
-3. [UI/UX issues and improvements](#ui/ux-issues-and-improvements)
-4. [Accessibility issues and improvements](#accessibility-issues-and-improvements)
+3. [UI/UX improvements](#ui/ux-improvements)
+4. [Accessibility improvements](#accessibility-improvements)
 
 
 ## App URL
@@ -18,7 +18,7 @@ This is a rebuilt of a similar app that I built in vanilla JavaScript. The origi
 3. [react-colorful](https://www.npmjs.com/package/react-colorful)
 4. [typewriter-effect](https://www.npmjs.com/package/typewriter-effect)
 
-## UI/UX issues and improvements
+## UI/UX improvements
 ### Issues
 1. The basic functionallity of the app was unclear to some users. They reported back to me that a set of user instructions would be helpful.
 2. Though already fully responsive, the UI did not work equally well on all devices.
@@ -27,7 +27,7 @@ This is a rebuilt of a similar app that I built in vanilla JavaScript. The origi
 1. On the very first render, a modal describing how to use the app is rendered to the page. Using local storage and conditional rendering, the modal is rendered to new users only.
 2. By checking if the user is on a touch device, the UI is adapted to the type of device and certain hover/focus effects are omitted from touch devices to avoid cluttering the UI.
 
-## Accessibility issues and improvements
+## Accessibility improvements
 ### Issues
 1. The label on the form elements were invisible not only on the screen but also to screen readers.
 2. Keyboard navigation was not fully possible.
