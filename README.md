@@ -22,7 +22,7 @@ This is a rebuilt of a vanilla JavaScript app. The original app had some issues 
 ### Issues
 1. The basic functionallity of the app was unclear to some users. They reported back to me that a set of user instructions would be helpful.
 2. Though already fully responsive, the UI did not work equally well on all devices.
-3. The selected seed color and the corresponding hex code is not part of the generated color scheme, i.e. the hex code is not visible to the user.
+3. The selected seed color and the corresponding hex code is not part of the generated color scheme, i.e. the hex code was not visible to the user.
 
 ### Improvements
 1. On the very first render, a modal describing how to use the app is rendered to the page. Using local storage and conditional rendering, the modal is rendered to new users only.
