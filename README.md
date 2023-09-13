@@ -4,13 +4,19 @@ This is a rebuilt of a similar app that I built in vanilla JavaScript. The origi
 
 ## In this document:
 1. [App URL](#app-url)
-2. [UI/UX issues and improvements](#ui/ux-issues-and-improvements)
-3. [Accessibility issues and improvements](#accessibility-issues-and-improvements)
+2. [Technologies used](#technologies-used)
+3. [UI/UX issues and improvements](#ui/ux-issues-and-improvements)
+4. [Accessibility issues and improvements](#accessibility-issues-and-improvements)
 
 
 ## App URL
 [https://symphonious-swan-26e8af.netlify.app/](https://symphonious-swan-26e8af.netlify.app/)
 
+## Technologies used
+1. [React.js](https://react.dev/)
+2. [The Color Api](https://www.thecolorapi.com/)
+3. [react-colorful](https://www.npmjs.com/package/react-colorful)
+4. [typewriter-effect](https://www.npmjs.com/package/typewriter-effect)
 
 ## UI/UX issues and improvements
 ### Issues
