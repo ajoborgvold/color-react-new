@@ -2,7 +2,7 @@ import { useContext } from "react"
 import { AppContext } from "../context/AppContext"
 
 function Select() {
-    const { handleModeChange, setShowColorPicker } = useContext(AppContext)
+    const { handleModeChange } = useContext(AppContext)
 
     const optionsObj = {
         'monochrome': 'Monochrome',
@@ -26,7 +26,6 @@ function Select() {
             <label htmlFor="mode" className="label">Select a color mode</label>
             <select 
                 onChange={handleModeChange} 
-                onFocus={() => setShowColorPicker(false)} 
                 name="mode" 
                 id="mode" 
                 className="select-element"
