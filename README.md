@@ -46,5 +46,5 @@ This is a rebuilt of a vanilla JavaScript app. The original app had some issues 
 ## Stumbling and learning points
 ### Working with react-colorful
 For aesthetic reasons, I chose not to use the HTML `input` element `type="color"` and instead use the `<HexColorPicker />` component from the third-party library react-colorful. This allowed me to customize the styling of the displayed color swatch to better match the app's overall design. Working with the third-party library also challenged me in various ways, e.g.:
-- Ensuring both accessibility and a good UX on all types of divices and for mouse as well as keyboard navigation.
-- Accessing the color data correctly, storing it in a JS object together with the data from the JSX `select` element, continuously updating this object using `useState`, and passing its values appropriately when making the fetch request to the API.
+- Accessing the color data correctly, storing it in a JS object together with the data from the JSX `select` element, continuously updating this object using `useState` whenever the value of either the color picker or the select menu changes, and passing its values appropriately when making the fetch request to the API.
+- Ensuring both accessibility and a good UX on all types of devices and for mouse as well as keyboard navigation.
