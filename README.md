@@ -6,5 +6,5 @@ An app that allows you to generate color schemes based on your selection of seed
 2. 
 
 
-### App URL {#app-url}
+### App URL
 [https://symphonious-swan-26e8af.netlify.app/](https://symphonious-swan-26e8af.netlify.app/)
