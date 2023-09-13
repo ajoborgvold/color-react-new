@@ -7,15 +7,15 @@ This is a rebuilt of a similar app that I built in vanilla JavaScript. The origi
 2. [UI/UX issues and improvements](#ui/ux-issues-and-improvements)
 
 
-### App URL
+## App URL
 [https://symphonious-swan-26e8af.netlify.app/](https://symphonious-swan-26e8af.netlify.app/)
 
 
-### UI/UX issues and improvements
-#### Issues
+## UI/UX issues and improvements
+### Issues
 1. The basic functionallity of the app was unclear to some users. They reported back to me that a set of user instructions would be helpful.
 2. Though already fully responsive, the UI did not work equally well on all devices.
 
-#### Improvements
+### Improvements
 1. On the very first render, a modal describing how to use the app is rendered to the page. Using local storage and conditional rendering, the modal is rendered to new users only.
 2. 
