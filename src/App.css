@@ -45,6 +45,12 @@ p {
   font-weight: 300;
 }
 
+.p--error {
+  font-size: 1rem;
+  margin: auto;
+  padding: 0 2em;
+  text-align: center;
+}
 
 /* Buttons */
 .btn {
@@ -221,12 +227,6 @@ p {
   height: 100%;
   margin: 1em auto 0;
   box-shadow: 0 0 0 1px var(--bg-primary), 0 0 .5em var(--color-primary);
-}
-
-.p--error {
-  margin: auto;
-  padding: 0 2em;
-  text-align: center;
 }
 
 .scheme__item {
