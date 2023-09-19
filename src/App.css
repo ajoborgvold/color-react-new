@@ -47,8 +47,6 @@ p {
 
 .p--error {
   font-size: 1rem;
-  margin: auto;
-  padding: 0 2em;
   text-align: center;
   line-height: 1.5;
 }
@@ -90,6 +88,16 @@ p {
 
 .modal::backdrop {
   background-color: var(--bg-primary-opacity);
+}
+
+
+/* Error message */
+.error-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin: auto;
+  padding: 0 2em;
 }
 
 

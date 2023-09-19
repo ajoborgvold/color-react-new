@@ -1,6 +1,9 @@
 function Error() {
     return (
-        <p className="p--error">Sorry, the color scheme generator is currently unavailable. Please try again later.</p>
+        <div className="error-wrapper">
+            <p className="p--error">Sorry, the color scheme generator is currently unavailable.</p>
+            <p className="p--error">Please try again later.</p>
+        </div>
     )
 }
 
