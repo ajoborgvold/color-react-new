@@ -50,6 +50,7 @@ p {
   margin: auto;
   padding: 0 2em;
   text-align: center;
+  line-height: 1.5;
 }
 
 /* Buttons */
