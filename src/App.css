@@ -223,6 +223,12 @@ p {
   box-shadow: 0 0 0 1px var(--bg-primary), 0 0 .5em var(--color-primary);
 }
 
+.p--error {
+  margin: auto;
+  padding: 0 2em;
+  text-align: center;
+}
+
 .scheme__item {
   position: relative;
   width: 100%;
