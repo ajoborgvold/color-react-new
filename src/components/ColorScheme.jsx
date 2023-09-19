@@ -1,6 +1,7 @@
 import { useContext } from 'react'
 import { AppContext } from '../context/AppContext'
 import Color from "./Color"
+import Error from './Error'
 
 function ColorScheme() {
     const { 
@@ -9,7 +10,8 @@ function ColorScheme() {
         copiedHexCode,
         hoveredItem,
         handleMouseEnter,
-        handleMouseLeave
+        handleMouseLeave,
+        isError
     } = useContext(AppContext)
 
     return (
@@ -31,7 +33,7 @@ function ColorScheme() {
                 </p>
             </div>
             <div className='scheme-wrapper'>
-                <Color />
+                {isError ? <Error /> : <Color />}
             </div>
         </section>
     )

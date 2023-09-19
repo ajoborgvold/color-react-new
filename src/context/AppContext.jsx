@@ -8,6 +8,7 @@ function AppContextProvider({children}) {
     const [userSelection, setUserSelection] = useState({seed: '#5088c3', mode: 'monochrome'})
     const [hoveredItem, setHoveredItem] = useState(null)
     const [copiedHexCode, setCopiedHexCode] = useState('')
+    const [isError, setIsError] = useState(false)
     const firstRender = useRef(true)
 
     useEffect(() => {
@@ -25,9 +26,19 @@ function AppContextProvider({children}) {
     async function callApi(e) {
         e && e.preventDefault()
 
-        const res = await fetch(`https://www.thecolorapi.com/scheme?hex=${userSelection.seed.slice(1)}&mode=${userSelection.mode}`)
-        const data = await res.json()
-        setColorData(data.colors)
+        try {
+            const res = await fetch(`https://www.thecolorapi.com/scheme?hex=${userSelection.seed.slice(1)}&mode=${userSelection.mode}`)
+
+            if (!res.ok) {
+                throw new Error(`HTTP error! Status: ${res.status}`)
+            }
+            
+            const data = await res.json()
+            setColorData(data.colors)
+        } catch (error) {
+            setIsError(true)
+            console.error('Error fetchting data:', error)
+        }
     }
 
 // Handle rendering of and data gathering from the form elements
@@ -84,6 +95,7 @@ function AppContextProvider({children}) {
                 handleMouseLeave,
                 copyHexCode,
                 copiedHexCode,
+                isError
             }}
         >
             {children}
