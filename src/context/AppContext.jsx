@@ -8,7 +8,7 @@ function AppContextProvider({children}) {
     const [userSelection, setUserSelection] = useState({seed: '#5088c3', mode: 'monochrome'})
     const [hoveredItem, setHoveredItem] = useState(null)
     const [copiedHexCode, setCopiedHexCode] = useState('')
-    const [isError, setIsError] = useState(true)
+    const [isError, setIsError] = useState(false)
     const firstRender = useRef(true)
 
     useEffect(() => {
