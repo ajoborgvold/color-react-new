@@ -4,14 +4,21 @@ This is a rebuilt of a vanilla JavaScript color scheme generator. The original a
 
 ## In this document:
 1. [App URL](#app-url)
-2. [Technologies used](#technologies-used)
-3. [UI/UX improvements](#ui/ux-improvements)
-4. [Accessibility improvements](#accessibility-improvements)
-5. [Stumbling and learning points](#stumbling-and-learning-points)
+2. [App screenshot](#app-screenshot)
+3. [Technologies used](#technologies-used)
+4. [UI/UX improvements](#ui/ux-improvements)
+5. [Accessibility improvements](#accessibility-improvements)
+6. [Stumbling and learning points](#stumbling-and-learning-points)
+7. [Ideas for future improvements](#ideas-for-future-improvements)
 
 
 ## App URL
-[https://symphonious-swan-26e8af.netlify.app/](https://symphonious-swan-26e8af.netlify.app/)
+[https://colorschemegenerator-ajo-b.netlify.app/](https://colorschemegenerator-ajo-b.netlify.app/)
+
+
+## App screenshot
+![Color scheme generator](/src/assets/screenshot.png)
+*The color scheme generated when the app first loads*
 
 
 ## Technologies used
@@ -23,7 +30,7 @@ This is a rebuilt of a vanilla JavaScript color scheme generator. The original a
 
 ## UI/UX improvements
 ### Issues
-1. The basic functionallity of the app was unclear to some users. They reported back to me that a set of user instructions would be helpful.
+1. The basic functionallity of the app was unclear to some users. They reported that a set of user instructions would be helpful.
 2. Though already fully responsive, the UI did not work equally well on all devices.
 3. The selected seed color and the corresponding hex code is not part of the generated color scheme, i.e. the seed color code was not visible to the user.
 
@@ -45,7 +52,11 @@ This is a rebuilt of a vanilla JavaScript color scheme generator. The original a
 
 ## Stumbling and learning points
 ### Working with react-colorful
-For aesthetic reasons, I chose not to use the HTML `input` element `type="color"` and instead use the `<HexColorPicker />` component from the third-party library react-colorful. This allowed me to customize the styling of the displayed color swatch to better match the app's overall design. Since I've never worked with this third-party library before, it challenged me in various ways, e.g.:
-- Accessing the color data correctly and storing it in a JS object together with the data from the HTML `select` element. Due to the color picker not being a native HTML element, the data from the two form elements has to be handled differently which adds an extra layer of complexity to the already complex React form.
-- Continuously updating this form data object using `useState` whenever the value of one of the form elements changes, and passing the object's values appropriately when making the fetch request to the API.
+For aesthetic reasons, I chose not to use the HTML `input` element `type="color"` and instead use the `<HexColorPicker />` component from the third-party library react-colorful. This allows customized styling of the displayed color swatch and ensures consistency in styling across browsers and devices. Working with this third-party library involved e.g.:
+- Accessing the color data and managing it using the React hook `useState` together with the data from the HTML `select` element. Due to the color picker not being a native HTML element, the data from the two form elements has to be handled differently.
 - Ensuring both accessibility and a good UX on all types of devices and for mouse as well as keyboard navigation.
+
+
+## Ideas for future improvements
+- Add tooltips on form elements to provide information to the user about the functionallity of each element. This should be a supplement to the modal with user instructions.
+- Turn the app into a PWA.
